@@ -112,7 +112,7 @@ if ( process.env.SENDGRID_USERNAME && process.env.SENDGRID_PASSWORD ) {
 }
 
 if (process.env.DATABASE_URL) {
-  config.database = process.env.DATABASE_URL
+  config.database = process.env.DATABASE_URL + '?ssl=false'
 }
 
 if (process.env.REDIS_URL) {
