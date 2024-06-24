@@ -43,7 +43,7 @@ const selectMultiple = (selectQuery, value) => {
 }
 
 //////
-// NAME
+// NAME NEW
 //////
 
 const T1 = 'MAILING – filter by name'

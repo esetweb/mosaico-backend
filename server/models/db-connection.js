@@ -25,4 +25,10 @@ module.exports = new Sequelize(config.database, {
   // https://github.com/sequelize/sequelize/issues/8417#issuecomment-341617577
   // http://docs.sequelizejs.com/manual/tutorial/querying.html#operators-security
   operatorsAliases,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  }
 })

@@ -23,13 +23,6 @@ function isHttpUrl(uri) {
 }
 
 function secureHtml(html) {
-  // replace all tabs by spaces so `he` don't replace them by `&#x9;`
-  // `he` is an HTML entity encoder/decoder
-  html = html.replace(/\t/g, ' ')
-  html = htmlEntities.encode(html, {
-    useNamedReferences: true,
-    allowUnsafeSymbols: true,
-  })
   return html
 }
 

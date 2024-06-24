@@ -4,7 +4,7 @@
 
 [![screencast](https://drive.google.com/uc?export=view&id=0BwQNm5fx5y30SXpSMWI4U1Z3b0E)](https://youtu.be/HqUT2et0FnM)
 
-# Mosaico backend
+# Mosaico Backend
 
 Ready to go backend for [Mosaico](http://mosaico.io) editor version 0.17.4
 
@@ -16,7 +16,7 @@ Main features are:
 - download ZIP archives of mailings
 - sending mailings by email for testing purpose
 
-## Quick start
+## Quick Start
 
 See the screencast https://youtu.be/sLzZq3cXDi0
 

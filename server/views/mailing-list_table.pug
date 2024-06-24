@@ -23,9 +23,11 @@ table.mdl-data-table
     th.mdl-data-table__cell--non-numeric
       +reorder('/', 'updatedAt', 'home.saved.last-change')
     if (isAdmin)
-      th.mdl-data-table__cell--action= __('home.saved.transfer')
+      th.mdl-data-table__cell--action= __('home.saved.delete')
+	th.mdl-data-table__cell--action= __('home.saved.delete')
     th.mdl-data-table__cell--action= __('home.saved.rename')
     th.mdl-data-table__cell--action= __('home.saved.duplicate')
+	
 
   tbody.js-tbody-selection
     if !mailings.length
@@ -68,6 +70,13 @@ table.mdl-data-table
                 href=mailing.url.transfer
               )
                 i.material-icons forward
+		  td.mdl-button.mdl-js-button.mdl-button--icon.mdl-button--accent.js-delete-mailings(
+      type="submit"
+      formaction=mergeQueries('/mailings', _query, { _method: 'DELETE', })
+    )
+      i.material-icons delete
+    span(for="delete-mailing").mdl-tooltip.mdl-tooltip--large= __('home.saved.delete')	  
+		
           td.mdl-data-table__cell--action
             a.js-rename.mdl-button.mdl-js-button.mdl-button--icon.mdl-button--accent(data-href=mailing.url.update title="rename" href="#"): i.material-icons title
           td.mdl-data-table__cell--action

@@ -474,6 +474,5 @@ module.exports = {
   updateLabels: h.asyncMiddleware( updateLabels ),
   bulkRemove:   h.asyncMiddleware( bulkRemove ),
   create:       h.asyncMiddleware( create ),
-  duplicate:    h.asyncMiddleware( duplicate ),
-  transfer,
+  duplicate:    h.asyncMiddleware( duplicate )
 }

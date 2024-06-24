@@ -4,5 +4,10 @@ xfonts-100dpi
 xfonts-75dpi
 xfonts-scalable
 xfonts-cyrillic
+libxfont-dev
+libxfont2
 libnotify4
 libxss1
+python2.7
+build-essential
+libpq-dev

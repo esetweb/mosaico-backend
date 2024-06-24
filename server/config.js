@@ -23,8 +23,8 @@ const config  = rc('backend', {
     port:         1025,
   },
   emailOptions: {
-    from:               'Mosaico-backend test <info@mosaico-backend-test.name>',
-    testSubjectPrefix:  '[mosaico-backend email builder]',
+    from:               'Mosaico test <info@mosaico-backend-test.name>',
+    testSubjectPrefix:  '[mosaico email builder]',
   },
   storage: {
   },
@@ -40,9 +40,9 @@ const config  = rc('backend', {
   },
   brand: {
     name:                     'mosaico-backend',
-    'color-primary':          'rgb(63,81,181)',
+    'color-primary':          'rgb(0,135,144)',
     'color-primary-contrast': 'white',
-    'color-accent':           'rgb(255,64,129)',
+    'color-accent':           'rgb(66,77,86)',
     'color-accent-contrast':  'white',
   },
   // this is really optional.
@@ -112,7 +112,7 @@ if ( process.env.SENDGRID_USERNAME && process.env.SENDGRID_PASSWORD ) {
 }
 
 if (process.env.DATABASE_URL) {
-  config.database = process.env.DATABASE_URL
+  config.database = process.env.DATABASE_URL + '?ssl=false'
 }
 
 if (process.env.REDIS_URL) {
@@ -120,7 +120,7 @@ if (process.env.REDIS_URL) {
 }
 
 if (process.env.APP_NAME) {
-  config.host = `${process.env.APP_NAME}.herokuapp.com`
+  config.host = `mail-builder.eset.com`
 }
 
 // if ( config.isDev ) console.log( inspect(config) )

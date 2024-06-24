@@ -467,6 +467,7 @@ module.exports = _ => {
   app.post('/mailings/:mailingId/transfer', mailings.transfer.post)
   app.all('/mailings*', guard('user'))
   app.get('/mailings/:mailingId/duplicate', mailings.duplicate)
+  app.get('/mailings/:mailingId/delete', mailings.delete)
   app.post('/mailings/:mailingId/send', download.send)
   app.post('/mailings/:mailingId/zip', download.zip)
   app.get('/mailings/:mailingId', mailings.show)
@@ -622,28 +623,7 @@ module.exports = _ => {
       return stopApplication(new Error('[REDIS] connection – ERROR'), { mail })
     }
 
-    try {
-      await sequelize.authenticate()
-      console.log(c.green('[DATABASE] connection – SUCCESS'))
-    } catch (err) {
-      console.log(c.red('[DATABASE] connection – ERROR'))
-      return stopApplication(new Error('[DATABASE] connection – ERROR'), {
-        mail,
-        redis,
-      })
-    }
-
-    try {
-      await sequelize.sync()
-      console.log(c.green('[DATABASE] sync – SUCCESS'))
-    } catch (err) {
-      console.log(c.red('[DATABASE] sync – ERROR'))
-      return stopApplication(new Error('[DATABASE] sync – ERROR'), {
-        mail,
-        redis,
-        sequelize,
-      })
-    }
+    
 
     startApplication()
   })

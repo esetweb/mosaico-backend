@@ -20,7 +20,7 @@ ko.bindingHandlers.wysiwygOrHtml = {
     var isNotWysiwygMode = (typeof bindingContext.templateMode == 'undefined' || bindingContext.templateMode != 'wysiwyg');
     if (isNotWysiwygMode)
       return ko.bindingHandlers['virtualHtml'].update(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext);
-    //else 
+    //else
     //  return ko.bindingHandlers.wysiwyg.update(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext);
   }
 };
@@ -197,7 +197,7 @@ ko.bindingHandlers.wysiwyg = {
     plugins: ["link hr paste lists textcolor code"],
     // valid_elements: 'strong/b,em/i,*[*]',
     // extended_valid_elements: 'strong/b,em/i,*[*]',
-    // Removed: image fullscreen contextmenu 
+    // Removed: image fullscreen contextmenu
     // download custom:
     // jquery version con legacyoutput, anchor, code, importcss, link, paste, textcolor, hr, lists
   },
@@ -243,8 +243,8 @@ ko.bindingHandlers.wysiwyg = {
       inline: true,
       // maybe not needed, but won't hurt.
       hidden_input: false,
-      plugins: ["paste"],
-      toolbar1: "bold italic",
+      plugins:["link hr paste lists textcolor code"],
+      toolbar1:'bold italic forecolor backcolor hr styleselect removeformat link unlink pastetext code',
       toolbar2: "",
       // we have to disable preview_styles otherwise tinymce push inline every style he things will be applied and this makes the style menu to inherit color/font-family and more.
       preview_styles: false,
@@ -264,7 +264,7 @@ ko.bindingHandlers.wysiwyg = {
           element.classList.remove(ko.bindingHandlers.wysiwyg.initializingClass);
         }
 
-        // Warn about editing inline elements. Please note that we force wellknown HTML inline element to display as inline-block 
+        // Warn about editing inline elements. Please note that we force wellknown HTML inline element to display as inline-block
         // in our default style, so this should not happen unless you use unknown elements or you force the display: inline.
         // NOTE: we do this in a setTimeout to let the browser apply the CSS styles to the elements!
         if (typeof console.debug == 'function') {
@@ -367,7 +367,7 @@ ko.bindingHandlers.wysiwyg = {
       options.selector = '#' + selectorId;
     }
 
-    ko.utils.extend(options, ko.bindingHandlers.wysiwyg.standardOptions);
+    ko.utils.extend(options, ko.bindingHandlers.wysiwyg.fullOptions);
     if (fullEditor) ko.utils.extend(options, ko.bindingHandlers.wysiwyg.fullOptions);
 
     // we have to put initialization in a settimeout, otherwise switching from "1" to "2" columns blocks

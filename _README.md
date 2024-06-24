@@ -1,6 +1,6 @@
 # Mosaico - Responsive Email Template Editor
 
-Mosaico is a JavaScript library (or maybe a single page application) supporting the editing of email templates.
+Mosaico is a a JavaScript library (or maybe a single page application) supporting the editing of email templates.
 The great thing is that Mosaico itself does not define what you can edit or what styles you can change: this is defined by the template. This makes Mosaico very flexible.
 
 ![Mosaico Screenshot](res/img/screenshot.png)

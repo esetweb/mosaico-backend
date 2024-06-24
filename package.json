@@ -52,7 +52,7 @@
     "connect-redis": "^3.3.3",
     "cookie-parser": "^1.4.3",
     "denodeify": "^1.2.1",
-    "express": "^4.16.3",
+    "express": "^4.17.1",
     "express-flash": "0.0.2",
     "express-session": "^1.15.6",
     "formattor": "0.0.2",
@@ -77,15 +77,15 @@
     "nodemailer-wellknown": "^0.2.3",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "pg": "^7.4.3",
-    "pg-hstore": "^2.3.2",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
     "probe-image-size": "^4.0.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.3",
     "qs": "^6.5.2",
     "rand-token": "^0.4.0",
     "rc": "^1.2.8",
     "request": "^2.88.0",
-    "sequelize": "^4.38.0",
+    "sequelize": "^6.6.5",
     "serve-favicon": "^2.5.0",
     "sharp": "^0.20.7",
     "speakingurl": "^14.0.1",
@@ -235,7 +235,7 @@
     "heroku-postbuild": "npm run build"
   },
   "engines": {
-    "node": "8.11.4",
+    "node": "^10.1.1",
     "npm": "5.6.0"
   }
 }
