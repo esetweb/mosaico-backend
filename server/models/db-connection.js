@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 
 const config = require('../config')
 
-let logging = () => {}
+let logging = () => { }
 const { Op } = Sequelize
 
 if (config.log.db) {
@@ -27,7 +27,7 @@ module.exports = new Sequelize(config.database, {
   operatorsAliases,
   dialectOptions: {
     ssl: {
-      require: true,
+      require: false,
       rejectUnauthorized: false
     }
   }
