@@ -460,10 +460,11 @@ module.exports = _ => {
   //----- MORE IMAGES
 
   app.delete('/img/:imageName', guard('user'), images.destroy)
-
+  console.log(JSON.stringify(app))
   //----- UPLOADS
   console.log('-------------------- UPLOADS -------------------')
   app.all('/upload*', guard('user'))
+  console.log(JSON.stringify(app))
   app.get('/upload/:galleryType/:postgreId', images.listImages)
   app.post('/upload/:galleryType/:postgreId', images.upload)
   console.log(JSON.stringify(app))
