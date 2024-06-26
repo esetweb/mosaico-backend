@@ -62,6 +62,8 @@ module.exports = _ => {
     process.exit(1)
   }
 
+  console.log('-------------------- START -------------------')
+
   app.set('trust proxy', true)
   app.use(helmet())
 
@@ -460,7 +462,7 @@ module.exports = _ => {
   app.delete('/img/:imageName', guard('user'), images.destroy)
 
   //----- UPLOADS
-
+  console.log('-------------------- UPLOADS -------------------')
   app.all('/upload*', guard('user'))
   app.get('/upload/:galleryType/:postgreId', images.listImages)
   app.post('/upload/:galleryType/:postgreId', images.upload)
