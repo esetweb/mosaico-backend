@@ -469,7 +469,7 @@ module.exports = _ => {
 
   //----- MAILINGS
   console.log('-------------------- MAILINGS -------------------')
-  app.all('/mailings/:mailingId/transfer', guard('admin'))
+  //app.all('/mailings/:mailingId/transfer', guard('admin'))
   console.log(JSON.stringify(app))
   app.get('/mailings/:mailingId/transfer', mailings.transfer.get)
   app.post('/mailings/:mailingId/transfer', mailings.transfer.post)
