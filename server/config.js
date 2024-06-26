@@ -58,7 +58,7 @@ const config = rc('backend', {
     engines: pkg.engines,
   },
   log: {
-    db: false,
+    db: true,
   }
 })
 
