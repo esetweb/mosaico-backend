@@ -57,6 +57,11 @@ module.exports = _ => {
 
   const app = express()
 
+  if (!app) {
+    console.log('express failed to start')
+    process.exit(1)
+  }
+
   app.set('trust proxy', true)
   app.use(helmet())
 
@@ -623,7 +628,7 @@ module.exports = _ => {
       return stopApplication(new Error('[REDIS] connection – ERROR'), { mail })
     }
 
-    
+
 
     startApplication()
   })
