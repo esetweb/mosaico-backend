@@ -468,8 +468,9 @@ module.exports = _ => {
   app.post('/upload/:galleryType/:postgreId', images.upload)
 
   //----- MAILINGS
-
+  console.log('-------------------- MAILINGS -------------------')
   app.all('/mailings/:mailingId/transfer', guard('admin'))
+  console.log(JSON.stringify(app))
   app.get('/mailings/:mailingId/transfer', mailings.transfer.get)
   app.post('/mailings/:mailingId/transfer', mailings.transfer.post)
   app.all('/mailings*', guard('user'))
