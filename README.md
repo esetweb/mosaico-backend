@@ -23,7 +23,7 @@ See the screencast https://youtu.be/sLzZq3cXDi0
 ## INSTALL
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc  TO UPDATE -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [ON HEROKU](#on-heroku)
   - [about heroku's stack version](#about-herokus-stack-version)
