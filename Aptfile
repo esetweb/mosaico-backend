@@ -11,3 +11,4 @@ libxss1
 python2.7
 build-essential
 libpq-dev
+libpq

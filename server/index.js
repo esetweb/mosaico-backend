@@ -57,10 +57,7 @@ module.exports = _ => {
 
   const app = express()
 
-  if (!app) {
-    console.log('express failed to start')
-    process.exit(1)
-  }
+  
 
   console.log('-------------------- START -------------------')
 
