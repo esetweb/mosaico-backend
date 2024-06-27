@@ -57,10 +57,6 @@ module.exports = _ => {
 
   const app = express()
 
-  
-
-  console.log('-------------------- START -------------------')
-
   app.set('trust proxy', true)
   app.use(helmet())
 
@@ -457,18 +453,16 @@ module.exports = _ => {
   //----- MORE IMAGES
 
   app.delete('/img/:imageName', guard('user'), images.destroy)
-  console.log(JSON.stringify(app))
+
   //----- UPLOADS
-  console.log('-------------------- UPLOADS -------------------')
+
   app.all('/upload*', guard('user'))
-  console.log(JSON.stringify(app))
   app.get('/upload/:galleryType/:postgreId', images.listImages)
   app.post('/upload/:galleryType/:postgreId', images.upload)
-  console.log(JSON.stringify(app))
+
   //----- MAILINGS
-  console.log('-------------------- MAILINGS -------------------')
-  //app.all('/mailings/:mailingId/transfer', guard('admin'))
-  console.log(JSON.stringify(app))
+
+  app.all('/mailings/:mailingId/transfer', guard('admin'))
   app.get('/mailings/:mailingId/transfer', mailings.transfer.get)
   app.post('/mailings/:mailingId/transfer', mailings.transfer.post)
   app.all('/mailings*', guard('user'))
@@ -629,7 +623,7 @@ module.exports = _ => {
       return stopApplication(new Error('[REDIS] connection – ERROR'), { mail })
     }
 
-
+    
 
     startApplication()
   })

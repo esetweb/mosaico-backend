@@ -27,7 +27,7 @@ module.exports = new Sequelize(config.database, {
   operatorsAliases,
   dialectOptions: {
     ssl: {
-      require: true,
+      require: false,
       rejectUnauthorized: false
     }
   }
